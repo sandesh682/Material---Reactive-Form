@@ -13,11 +13,16 @@ export class LoginComponent implements OnInit {
   constructor(private formbuilder:FormBuilder) {
     this.loginForm = formbuilder.group({
         email: new FormControl('',[Validators.required,Validators.email]),
-        password: new FormControl('',[Validators.required,Validators.minLength(6)])
+        password: new FormControl('',[Validators.required,Validators.minLength(6)]),
+        phone: new FormControl('',[Validators.required,Validators.minLength(10)])
     })
    }
 
   ngOnInit() {
+  }
+
+  onLogin(loginForm){
+    console.log('Hello.....!')
   }
 
 }
